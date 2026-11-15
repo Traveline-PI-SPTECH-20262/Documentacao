@@ -171,3 +171,18 @@ CREATE TABLE recomendacoes (
         REFERENCES agencia(idAgencia)
 
 );
+
+
+-- =========================================
+-- TABELA: preferencias_notificacao
+-- =========================================
+
+CREATE TABLE preferencias_notificacao (
+    idPreferencia INT AUTO_INCREMENT,
+    idusuario INT NOT NULL UNIQUE,
+    notificacoesAtivas BOOLEAN NOT NULL DEFAULT TRUE,
+    frequencia ENUM('modoTeste', 'diaria', 'semanal', 'mensal')
+        NOT NULL DEFAULT 'mensal',
+	PRIMARY KEY(idPreferencia, idusuario),
+    FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE
+);
