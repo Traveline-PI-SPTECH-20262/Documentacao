@@ -95,8 +95,6 @@ CREATE TABLE preferencias_usuario (
     FOREIGN KEY (idUsuario) REFERENCES usuario(idusuario)
 );
 
-describe preferencias_usuario;
-
 CREATE TABLE planilha (
     idplanilha INT AUTO_INCREMENT PRIMARY KEY,
     caminho VARCHAR(255) NOT NULL,
