@@ -98,6 +98,7 @@ CREATE TABLE preferencias_usuario (
 CREATE TABLE planilha (
     idplanilha INT AUTO_INCREMENT PRIMARY KEY,
     caminho VARCHAR(255) NOT NULL,
+    nome VARCHAR(60) NOT NULL,
     dataHora DATETIME,
     situacao VARCHAR(45),
     dataInicio DATE,
