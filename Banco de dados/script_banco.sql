@@ -72,13 +72,13 @@ CREATE TABLE usuario (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    cargo VARCHAR(13) NOT NULL,
+    idCargo INT NOT NULL,
     idAgencia INT NOT NULL,
     criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     FOREIGN KEY (idAgencia)
         REFERENCES agencia(idAgencia),
-    FOREIGN KEY (cargo)
+    FOREIGN KEY (idCargo)
         REFERENCES cargo(idCargo)
 );
 
