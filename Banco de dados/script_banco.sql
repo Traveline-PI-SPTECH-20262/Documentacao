@@ -29,7 +29,8 @@ CREATE TABLE agencia (
     email VARCHAR(100) NOT NULL,
     dataCadastro DATE,
     telefone VARCHAR(20),
-    criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status TINYINT NOT NULL DEFAULT 1
 );
 
 -- Histórico de códigos de ativação gerados para cada agência
